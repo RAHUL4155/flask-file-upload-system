@@ -1,37 +1,87 @@
-Python - Flask
-======================
-This is a simple Python - Flask application. This application serves as a basic template for a web server using python for the backend, flask as the web application framework.
+# Flask File Upload System
 
-What does this application do?
--------------------------------
-This application serves a simple web server that listens on defined port, default: `5000`.
+A simple and clean File Upload Web Application built using Python Flask. This application allows users to upload, view, download, and delete files through a web interface.
 
+---
 
-# How to run?
-You can run the application in one of the following ways:
+## Features
 
-1. Press `F5`. This will start the application in debug mode.
+* Upload files from browser
+* View all uploaded files
+* Download files
+* Delete files
+* Clean and modern UI
 
-2. Open a terminal by going to 'View' -> 'Terminal'. Then, run following command: 
-   > `flask --app app.py run --host=0.0.0.0 --port=5000 --debug`
+---
 
-This will start the application in development mode.
+## Tech Stack
 
+* Backend: Python, Flask
+* Frontend: HTML, CSS
+* Storage: Local file system (uploads folder)
 
-Via curl command:
------------------
-1. Open a terminal.
-2. Type the following command: 
-   > `curl http://localhost:5000`
-3. Press 'Enter' to make the request.
+---
 
-Via Thunder Client:
--------------------
-1. Click on the Thunder Client icon on the activity bar on the side. If you can't find it, you can search for 'Thunder Client' in the 'View' -> 'Extensions' menu.
-2. Once Thunder Client is open, click on 'New Request'.
-3. In the 'Request URL' field, enter the URL of your application (e.g., http://localhost:5000) and select the HTTP method from the dropdown menu.
-5. Click on 'Send' to make the request.
+## Project Structure
 
-Visit [Flask Quickstart](https://flask.palletsprojects.com/en/latest/quickstart/) for more information.
+```id="y3l8mq"
+flask-file-upload-system/
+│── app.py
+│── templates/
+│   └── index.html
+│── static/
+│   └── style.css
+│── uploads/
+│── README.md
+```
 
-Happy coding! 🙂
+---
+
+## How to Run
+
+### 1. Install Dependencies
+
+```bash id="j9u2sm"
+pip install flask
+```
+
+### 2. Run the Application
+
+```bash id="c3f8hv"
+python app.py
+```
+
+### 3. Open in Browser
+
+```id="5zv3bp"
+http://127.0.0.1:5000
+```
+
+---
+
+## Application Routes
+
+* `/` → Upload file and view files
+* `/download/<filename>` → Download file
+* `/delete/<filename>` → Delete file
+
+---
+
+## Future Improvements
+
+* Image preview before upload
+* Upload progress bar
+* Authentication system
+* Cloud storage integration
+
+---
+
+## Reference
+
+Flask Documentation: https://flask.palletsprojects.com/
+
+---
+
+## Author
+
+Rahul
